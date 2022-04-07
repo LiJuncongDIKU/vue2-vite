@@ -1,0 +1,32 @@
+{
+  "name": "vue2-vite",
+  "version": "0.1.0",
+  "scripts": {
+    "serve": "vite --mode dev",
+    "serve:beta": "vite --mode beta",
+    "build:dev": "vite build --mode dev",
+    "build:beta": "vite build --mode beta"
+  },
+  "dependencies": {
+    "@turf/bbox": "^6.5.0",
+    "@turf/circle": "^6.5.0",
+    "axios": "^0.25.0",
+    "element-ui": "^2.15.6",
+    "ljc-axios": "^1.0.4",
+    "moment": "^2.29.1",
+    "vite": "^2.7.13",
+    "vue": "^2.6.14",
+    "vue-router": "^3.5.3",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@originjs/vite-plugin-global-style": "^1.0.2",
+    "@vitejs/plugin-legacy": "^1.6.4",
+    "sass": "^1.49.0",
+    "vite-plugin-compression": "^0.4.0",
+    "vite-plugin-imp": "^2.1.6",
+    "vite-plugin-vue2": "^1.9.2",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "private": true
+}
