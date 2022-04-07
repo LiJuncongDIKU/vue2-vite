@@ -7,7 +7,3 @@ vue2 + vite + ElementUI 按需引入 + vuex + vueRouter
 使用命令行拷贝到自己项目
 
 `npx degit github.com/LiJuncongDIKU/vue2-vite my-project`
-
-或者
-
-`npx degit gitee.com/LiJuncongDIKU/vue2-vite my-project`
