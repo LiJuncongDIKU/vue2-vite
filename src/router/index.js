@@ -1,25 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Loading from '@/components/views/Loading.vue';
-import LoadingError from '@/components/views/LoadingError.vue';
+import { lazyLoadView } from 'ljc-lazy-view';
 
 Vue.use(VueRouter);
-
-// 异步加载的提示
-function lazyLoadView(AsyncView) {
-  const AsyncHandler = () => ({
-    component: AsyncView, // 需要加载的组件 (应该是一个 `Promise` 对象)
-    loading: Loading, // 异步组件加载时使用的组件
-    error: LoadingError, // 加载失败时使用的组件
-    delay: 0,
-  });
-  return Promise.resolve({
-    functional: true,
-    render(h, { data, children }) {
-      return h(AsyncHandler, data, children);
-    },
-  });
-}
 
 const routes = [
   { path: '/', redirect: '/login' },

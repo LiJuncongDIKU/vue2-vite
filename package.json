@@ -8,11 +8,10 @@
     "build:beta": "vite build --mode beta"
   },
   "dependencies": {
-    "@turf/bbox": "^6.5.0",
-    "@turf/circle": "^6.5.0",
     "axios": "^0.25.0",
     "element-ui": "^2.15.6",
     "ljc-axios": "^1.0.4",
+    "ljc-lazy-view": "^0.0.2",
     "moment": "^2.29.1",
     "vite": "^2.7.13",
     "vue": "^2.6.14",

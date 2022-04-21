@@ -29,11 +29,11 @@
 .login-wrap{
   width: 250px;
   height: 250px;
-  padding: 50px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px #ccc;
+  padding: 50px 20px;
 }
 </style>
