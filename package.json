@@ -10,7 +10,7 @@
   "dependencies": {
     "axios": "^0.25.0",
     "element-ui": "^2.15.6",
-    "ljc-axios": "^1.0.4",
+    "ljc-axios": "^1.1.0",
     "ljc-lazy-view": "^0.0.2",
     "moment": "^2.29.1",
     "vite": "^2.7.13",
