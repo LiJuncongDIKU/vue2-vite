@@ -1,0 +1,7 @@
+{
+  "eslint.packageManager": "yarn",
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": false,
+  "prettier.prettierPath": "./node_modules/prettier",
+  "prettier.configPath": ".prettierrc.json"
+}
