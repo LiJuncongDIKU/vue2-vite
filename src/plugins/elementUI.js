@@ -1,4 +1,4 @@
-import Vue from "vue";
+import Vue from 'vue';
 import {
   Button,
   Icon,
@@ -8,12 +8,12 @@ import {
   MessageBox,
   Message,
   Notification,
-} from "element-ui";
+} from 'element-ui';
 
 // 默认取消弹窗点击遮罩层关闭
 Dialog.props.closeOnClickModal.default = false;
 
-Vue.prototype.$ELEMENT = { size: "small" };
+Vue.prototype.$ELEMENT = { size: 'small' };
 Vue.use(Loading.directive);
 Vue.prototype.$msgbox = MessageBox;
 Vue.prototype.$alert = MessageBox.alert;

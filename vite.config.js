@@ -1,3 +1,4 @@
+import path from "path";
 import { defineConfig, loadEnv } from "vite";
 import legacy from "@vitejs/plugin-legacy";
 import { createVuePlugin } from "vite-plugin-vue2";
@@ -6,11 +7,10 @@ import globalStyle from "@originjs/vite-plugin-global-style";
 import vitePluginImp from "vite-plugin-imp"; // 关键插件
 import { EsLinter, linterPlugin } from "vite-plugin-linter";
 
-import path from "path";
 import pkg from "./package.json";
 
 const REPLACEMENT = `${path.resolve(__dirname, "./src")}/`;
-const version = pkg.version;
+const {version} = pkg;
 const projectName = pkg.name;
 
 export default defineConfig((configEnv) => {
@@ -62,10 +62,10 @@ export default defineConfig((configEnv) => {
       }),
       linterPlugin({
         include: ["./src/**/*.js", "./src/**/*.vue"],
-        linters: [new EsLinter({ configEnv: configEnv })],
+        linters: [new EsLinter({ configEnv })],
         build: {
           includeMode: "filesInFolder",
-        }
+        },
       }),
     ],
     server: {

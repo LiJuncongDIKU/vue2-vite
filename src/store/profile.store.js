@@ -1,4 +1,4 @@
-import Apis from "@/service/apis";
+import Apis from '@/service/apis';
 
 const store = {
   namespaced: true,
@@ -14,7 +14,7 @@ const store = {
   actions: {
     // 用于刷新时获取当前登录信息
     fetchLoginInfo({ state }) {
-      Apis.getLoginInfo().then(res => {
+      Apis.getLoginInfo().then((res) => {
         state.loginInfo = res.data;
       });
     },

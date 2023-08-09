@@ -1,1 +1,5 @@
-{}
+{
+  "singleQuote": true,
+  "singleAttributePerLine": true,
+  "trailingComma": "all"
+}

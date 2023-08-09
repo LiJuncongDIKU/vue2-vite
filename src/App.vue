@@ -1,27 +1,27 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <router-view />
   </div>
 </template>
 
 <script>
-import eventBus from "@/plugins/eventBus";
+import eventBus from '@/plugins/eventBus';
 
 export default {
-  name: "App",
+  name: 'App',
   created() {
     // 处理由 apis.js 抛出的问题
-    eventBus.$on("request-error", (opt) => {
+    eventBus.$on('request-error', (opt) => {
       this.$alert(opt.content, {
-        confirmButtonText: "知道了",
+        confirmButtonText: '知道了',
         showCancelButton: false,
         showClose: true,
-        type: "error",
+        type: 'error',
         ...opt,
       });
     });
 
-    this.$store.dispatch("profile/fetchLoginInfo");
+    this.$store.dispatch('profile/fetchLoginInfo');
   },
 };
 </script>

@@ -4,9 +4,11 @@
 
 <script>
 export default {
+  name: 'RootHome',
   data() {
     return {};
   },
+  methods: {},
 };
 </script>
 

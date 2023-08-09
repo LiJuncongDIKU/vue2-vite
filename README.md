@@ -5,14 +5,32 @@
 命令查看 package.json
 
 # 关于 eslint 和 prettier
+
 请使用 `VSCode` 安装以下插件
-+ Prettier - Code formatter
-+ ESLint
-+ Formatting Toggle (推荐 可不使用)
-+ Code Spell Checker (推荐 可不使用)
+
+- Prettier - Code formatter
+- ESLint
+- Formatting Toggle (推荐 可不使用)
+- Code Spell Checker (推荐 可不使用)
 
 > 不可在 `.gitignore` 中添加 `.vscode`
 > 因为编辑器的 `prettier` 采用了覆盖路径的方式
+
+## eslint使用
+如果需要将拷贝过来的的文件手动进行全部格式化请执行以下命令  src为拷贝的文件夹路径 直接执行则格式化全局
+```
+yarn eslint --fix --ext .js,.vue src
+```
+## prettier 使用
+```
+yarn prettier src -w
+```
+## !!!注意!!!
+为了防止冲突 `prettier` 和 `eslint` 均设置为
++ 单引号格式
++ 全部多行带尾逗号
++ HTML模板属性强制单行
+以上规则均出于主流和使得git对比视图更清晰考虑
 
 # vue2-vite
 

@@ -3,34 +3,42 @@
     {{ loginInfo }}
     <div class="center login-wrap">
       欢迎登陆
-      <el-input v-model="account" placeholder="账户"></el-input>
+      <el-input
+        v-model="account"
+        placeholder="账户"
+      />
       <el-input
         v-model="password"
         placeholder="密码"
         type="password"
-      ></el-input>
-      <el-button type="primary" @click="login">登录</el-button>
+      />
+      <el-button
+        type="primary"
+        @click="login"
+      >
+        登录
+      </el-button>
     </div>
   </div>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState } from 'vuex';
 
 export default {
-  name: "login-page",
+  name: 'LoginPage',
   data() {
     return {
-      account: "test",
-      password: "123456",
+      account: 'test',
+      password: '123456',
     };
   },
   computed: {
-    ...mapState("profile", ["loginInfo"]),
+    ...mapState('profile', ['loginInfo']),
   },
   methods: {
     login() {
-      this.$router.push({ name: "home" });
+      this.$router.push({ name: 'home' });
     },
   },
 };

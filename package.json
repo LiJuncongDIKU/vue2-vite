@@ -4,7 +4,8 @@
   "scripts": {
     "serve": "vite --mode dev",
     "build:dev": "vite build --mode dev",
-    "build:beta": "vite build --mode beta"
+    "build:beta": "vite build --mode beta",
+    "prepare": "husky install"
   },
   "dependencies": {
     "axios": "^0.25.0",
@@ -29,14 +30,20 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-vue": "^9.9.0",
+    "eslint-plugin-vue": "^9.16.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "prettier": "2.8.4",
     "sass": "^1.49.0",
     "vite-plugin-compression": "^0.4.0",
     "vite-plugin-imp": "^2.1.6",
     "vite-plugin-linter": "^2.0.2",
     "vite-plugin-vue2": "^1.9.2",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "2.6.14"
   },
-  "private": true
+  "private": true,
+  "license": "MIT",
+  "lint-staged": {
+    "*.{vue,js}": "eslint --cache --fix --ext .vue.js"
+  }
 }

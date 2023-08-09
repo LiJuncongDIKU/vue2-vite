@@ -1,10 +1,10 @@
-import Vue from "vue";
+import Vue from 'vue';
 
-import App from "@/App.vue";
-import store from "@/store";
-import router from "@/router";
-import "@/plugins/elementUI";
-import apis from "@/service/apis";
+import App from '@/App.vue';
+import store from '@/store';
+import router from '@/router';
+import '@/plugins/elementUI';
+import apis from '@/service/apis';
 
 Vue.config.productionTip = false;
 Vue.prototype.$apis = apis;
@@ -13,7 +13,7 @@ new Vue({
   router,
   store,
   render: (h) => h(App),
-}).$mount("#app");
+}).$mount('#app');
 
 // 打印打包信息
 /* global __APP_VERSION__, __BUILD_TIME__ */

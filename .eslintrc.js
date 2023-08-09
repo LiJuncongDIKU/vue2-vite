@@ -2,34 +2,38 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true,
   },
-  extends: ["plugin:vue/vue3-essential", "airbnb-base", "prettier"],
-  overrides: [],
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-  },
-  plugins: ["vue"],
-  rules: {
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        devDependencies: true,
-        optionalDependencies: false,
-        peerDependencies: false,
+  extends: [
+    'airbnb-base',
+    'plugin:vue/base',
+    'plugin:vue/essential',
+    'plugin:vue/strongly-recommended',
+    'plugin:vue/recommended',
+  ],
+  overrides: [
+    {
+      env: {
+        node: true,
       },
-    ],
-    "no-param-reassign": [
-      "error",
-      { props: true, ignorePropertyModificationsFor: ["state"] },
-    ],
+      files: ['.eslintrc.{js,cjs}'],
+      parserOptions: {
+        sourceType: 'script',
+      },
+    },
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: ['vue'],
+  ignorePatterns: ['vite.config.js'],
+  rules: {
+    'no-param-reassign': ['error', { props: false }],
   },
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       alias: {
-        map: [["@", "./src"]],
-        extensions: [".vue", ".js", ".jsx", ".json"],
+        map: [['@', './src/']],
       },
     },
   },
