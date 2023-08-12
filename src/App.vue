@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <h1>极速启动确实好玩</h1>
-    <router-view></router-view>
+    <router-view />
   </div>
 </template>
+
 <script>
 import eventBus from '@/plugins/eventBus';
 
@@ -20,6 +20,8 @@ export default {
         ...opt,
       });
     });
+
+    this.$store.dispatch('profile/fetchLoginInfo');
   },
 };
 </script>

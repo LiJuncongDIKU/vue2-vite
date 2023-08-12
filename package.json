@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "scripts": {
     "serve": "vite --mode dev",
-    "serve:beta": "vite --mode beta",
     "build:dev": "vite build --mode dev",
-    "build:beta": "vite build --mode beta"
+    "build:beta": "vite build --mode beta",
+    "prepare": "husky install"
   },
   "dependencies": {
     "axios": "^0.25.0",
@@ -14,18 +14,36 @@
     "ljc-lazy-view": "^0.0.2",
     "moment": "^2.29.1",
     "vite": "^2.7.13",
-    "vue": "^2.6.14",
+    "vue": "2.6.14",
     "vue-router": "^3.5.3",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
+    "@eslint/create-config": "^0.4.2",
     "@originjs/vite-plugin-global-style": "^1.0.2",
     "@vitejs/plugin-legacy": "^1.6.4",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-vue": "^9.16.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "2.8.4",
     "sass": "^1.49.0",
     "vite-plugin-compression": "^0.4.0",
     "vite-plugin-imp": "^2.1.6",
+    "vite-plugin-linter": "^2.0.2",
     "vite-plugin-vue2": "^1.9.2",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "2.6.14"
   },
-  "private": true
+  "private": true,
+  "license": "MIT",
+  "lint-staged": {
+    "*.{vue,js}": "eslint --cache --fix --ext .vue.js"
+  }
 }

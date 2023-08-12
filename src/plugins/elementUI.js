@@ -1,6 +1,13 @@
 import Vue from 'vue';
 import {
-  Button, Icon, Dialog, Input, Loading, MessageBox, Message, Notification
+  Button,
+  Icon,
+  Dialog,
+  Input,
+  Loading,
+  MessageBox,
+  Message,
+  Notification,
 } from 'element-ui';
 
 // 默认取消弹窗点击遮罩层关闭

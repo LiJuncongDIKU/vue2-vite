@@ -18,13 +18,10 @@ const routes = [
   },
 ];
 
-/**
- * 请查看 vite 文档中关于环境变量的章节
- * https://vitejs.cn/guide/env-and-mode.html#env-variables
- */
+/* global __PROJECT_NAME__ */
 const router = new VueRouter({
+  base: `/${__PROJECT_NAME__}/`,
   mode: 'history',
-  base: import.meta.env.BASE_URL,
   routes,
 });
 
