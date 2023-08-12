@@ -1,5 +1,5 @@
 import path from "path";
-import { defineConfig, loadEnv } from "vite";
+import { defineConfig } from "vite";
 import legacy from "@vitejs/plugin-legacy";
 import { createVuePlugin } from "vite-plugin-vue2";
 import viteCompression from "vite-plugin-compression";
@@ -14,15 +14,10 @@ const {version} = pkg;
 const projectName = pkg.name;
 
 export default defineConfig((configEnv) => {
-  const isDev = configEnv.mode === "dev";
-  /**
-   * 根据cdn来设置base  这个base对静态文件生效
-   * worker 需要内联方式 否则跨域异常
-   * axios 请求请根据 window.location.origin 设置base 否则cookie不共享
-   */
-  const base = `${isDev ? "/" : "https://cdn.chunyamap.com/"}`;
+  // const isDev = configEnv.mode === "dev";
+  // const base = `${isDev ? "/" : "xxx"}`;
   return {
-    base,
+    // base,
     envDir: 'env', // 如果需要用到环境变量 请放到一个文件夹中
     resolve: {
       alias: [
@@ -70,12 +65,6 @@ export default defineConfig((configEnv) => {
       }),
     ],
     server: {
-      proxy: {
-        '/api': {
-          target: 'https://dev.indoormap.huatugz.com',
-          changeOrigin: true,
-        },
-      },
     },
   };
 });
